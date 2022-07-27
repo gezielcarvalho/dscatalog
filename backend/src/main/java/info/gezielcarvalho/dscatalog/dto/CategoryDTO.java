@@ -1,6 +1,7 @@
 package info.gezielcarvalho.dscatalog.dto;
 
 import java.io.Serializable;
+import java.time.Instant;
 
 import info.gezielcarvalho.dscatalog.entities.Category;
 
@@ -9,6 +10,8 @@ public class CategoryDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String name;
+	private Instant createdAt;
+	private Instant updatedAt;
 	
 	public CategoryDTO() {
 		super();
@@ -42,7 +45,13 @@ public class CategoryDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+
+	public Instant getCreatedAt() {
+		return createdAt;
+	}
+
+	public Instant getUpdatedAt() {
+		return updatedAt;
+	}
 	
 }
