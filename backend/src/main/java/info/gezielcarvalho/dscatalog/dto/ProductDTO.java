@@ -1,5 +1,6 @@
 package info.gezielcarvalho.dscatalog.dto;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +9,9 @@ import java.util.Set;
 import info.gezielcarvalho.dscatalog.entities.Category;
 import info.gezielcarvalho.dscatalog.entities.Product;
 
-public class ProductDTO {
-	
+public class ProductDTO implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String name;
 	private String description;
@@ -100,5 +102,11 @@ public class ProductDTO {
 	public List<CategoryDTO> getCategories() {
 		return categories;
 	}
+
+	public void setCategories(List<CategoryDTO> categories) {
+		this.categories = categories;
+	}
+
+
 	
 }
